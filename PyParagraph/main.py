@@ -3,7 +3,7 @@ import re
 import string
 from statistics import mean
 
-in_filepath = os.path.join('raw_data','paragraph_2.txt')
+in_filepath = os.path.join('Resources','paragraph_2.txt')
 
 with open(in_filepath, 'r') as text:
     lines = text.read()
@@ -59,10 +59,12 @@ with open(in_filepath, 'r') as text:
         out_filename = input("Please enter a filename to save as: ")
         out_filename = "Output/" + out_filename + ".txt"
         fh = open(out_filename,'w')
+        fh.write("-------------------------------------\n")
         fh.write("TEXT ANALYSIS\n")
-        fh.write("-------------------------------\n")
+        fh.write("-------------------------------------\n")
         fh.write(f"Total word count: {total_word}\n")
         fh.write(f"Total sentence count: {total_sent}\n")
+        fh.write(f"Total paragraph count: {para_count}\n\n")
         fh.write(f"Average characters per word: {word_char_mean}\n")
         fh.write(f"Average words per sentence: {sent_word_mean}\n")
         fh.write(f"Average sentences per paragraph: {para_sent_mean}\n")
