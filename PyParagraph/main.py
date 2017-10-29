@@ -3,7 +3,7 @@ import re
 import string
 from statistics import mean
 
-in_filepath = os.path.join('Resources','paragraph_2.txt')
+in_filepath = os.path.join('Resources','dickens.txt')
 
 with open(in_filepath, 'r') as text:
     lines = text.read()

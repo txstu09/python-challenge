@@ -1,0 +1,12 @@
+-------------------------------------
+TEXT ANALYSIS
+-------------------------------------
+Total word count: 765
+Total sentence count: 30
+Total paragraph count: 6
+
+Average characters per word: 4.4
+Average words per sentence: 25.5
+Average sentences per paragraph: 5.0
+Average words per paragraph: 127.5
+-------------------------------------
