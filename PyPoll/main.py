@@ -1,7 +1,7 @@
 import os
 import csv
 
-csvpath = os.path.join('raw_data','election_data_2.csv')
+csvpath = os.path.join('Resources','election_data_2.csv')
 
 candidates = []
 vote_count = {}
@@ -37,3 +37,14 @@ for y in range(len(candidates)):
 print("-----------------------")
 print(f"Winner: {winner}")
 print("-----------------------")
+
+fh = open('Output/ElectionResults.txt','w')
+fh.write("ELECTION RESULTS\n")
+fh.write("-----------------------\n")
+fh.write("Total Votes: " + str(row_count)+"\n")
+fh.write("-----------------------\n")
+for y in range(len(candidates)):
+    fh.write(f"{candidates[y]}: {percents[y]}% ({vote_count[candidates[y]]})\n")
+fh.write("-----------------------\n")
+fh.write(f"Winner: {winner}\n")
+fh.write("-----------------------\n")
